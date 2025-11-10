@@ -23,11 +23,7 @@ export const Header = () => {
           technology seamlessly.
         </p>
         <div className="flex items-center gap-2 mt-6">
-          <a
-            href="https://docs.google.com/document/d/1cKj7X9SvuF-XNlT2kTZh7HgyxgWQYoSf1ufzZKuoAPg/edit?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="/docs/resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button>
               View Resume <ChevronRight />
             </Button>
