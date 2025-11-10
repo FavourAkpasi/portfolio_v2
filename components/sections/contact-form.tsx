@@ -26,6 +26,7 @@ import {Textarea} from '../ui/textarea';
 import {useMutation} from '@tanstack/react-query';
 import apiServices from '@/services';
 import {toast} from 'sonner';
+import {useState} from 'react';
 
 const formSchema = z.object({
   full_name: z.string().min(1, 'Full name is required'),
@@ -35,6 +36,8 @@ const formSchema = z.object({
 });
 
 export const ContactForm = () => {
+  const [open, setOpen] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -60,6 +63,7 @@ export const ContactForm = () => {
         },
       );
       form.reset();
+      setOpen(false);
     },
     onError: () => {
       toast.error('Something went wrong. Please try again later.');
@@ -71,7 +75,7 @@ export const ContactForm = () => {
   }
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button variant="outline">
           Let&apos;s Talk <MailIcon />
