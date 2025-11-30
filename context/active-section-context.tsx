@@ -14,8 +14,8 @@ type ActiveSectionContextType = {
   setActiveSection: React.Dispatch<React.SetStateAction<string>>;
   timeOfLastClick: number;
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
-  scrollProgress: number;
-  setScrollProgress: React.Dispatch<React.SetStateAction<number>>;
+  scrollPercentage: number;
+  setScrollPercentage: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(
@@ -27,7 +27,7 @@ export default function ActiveSectionContextProvider({
 }: ActiveSectionContextProviderProps) {
   const [activeSection, setActiveSection] = useState<string>(LINKS[0].href);
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const [scrollPercentage, setScrollPercentage] = useState(0);
 
   return (
     <ActiveSectionContext.Provider
@@ -36,8 +36,8 @@ export default function ActiveSectionContextProvider({
         setActiveSection,
         timeOfLastClick,
         setTimeOfLastClick,
-        scrollProgress,
-        setScrollProgress,
+        scrollPercentage,
+        setScrollPercentage,
       }}
     >
       {children}

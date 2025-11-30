@@ -11,6 +11,7 @@ import { StarSpotlight } from "@/components/ui/star-spotlight";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { LINKS } from "@/lib/constants";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import React from "react";
 
 const SectionWrapper = ({
   id,
@@ -28,12 +29,22 @@ const SectionWrapper = ({
 };
 
 export default function Home() {
-  const { setScrollProgress } = useActiveSectionContext();
+  const { setScrollPercentage } = useActiveSectionContext();
+  const ticking = React.useRef(false);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     const target = e.currentTarget;
-    const progress = target.scrollTop;
-    setScrollProgress(progress);
+    const scrollHeight = target.scrollHeight - target.clientHeight;
+    const scrollTop = target.scrollTop;
+
+    if (!ticking.current) {
+      window.requestAnimationFrame(() => {
+        const progress = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
+        setScrollPercentage(Math.min(1, Math.max(0, progress)));
+        ticking.current = false;
+      });
+      ticking.current = true;
+    }
   };
 
   return (

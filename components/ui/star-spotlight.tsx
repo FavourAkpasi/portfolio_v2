@@ -10,6 +10,8 @@ interface Star {
   opacity: number;
   vx: number;
   vy: number;
+  twinkleSpeed: number;
+  twinklePhase: number;
 }
 
 export const StarSpotlight = () => {
@@ -41,6 +43,8 @@ export const StarSpotlight = () => {
           opacity: Math.random(),
           vx: (Math.random() - 0.5) * 0.2,
           vy: (Math.random() - 0.5) * 0.2,
+          twinkleSpeed: 0.002 + Math.random() * 0.005,
+          twinklePhase: Math.random() * Math.PI * 2,
         });
       }
       starsRef.current = stars;
@@ -52,6 +56,7 @@ export const StarSpotlight = () => {
 
       const isDark = theme === "dark";
       const color = isDark ? "255, 255, 255" : "0, 0, 0";
+      const time = Date.now();
 
       starsRef.current.forEach((star) => {
         // Move star
@@ -64,19 +69,23 @@ export const StarSpotlight = () => {
         if (star.y < 0) star.y = canvas.height;
         if (star.y > canvas.height) star.y = 0;
 
+        // Twinkle effect
+        const twinkle = Math.sin(time * star.twinkleSpeed + star.twinklePhase);
+        const baseAlpha = 0.3 + (twinkle + 1) * 0.35; // Oscillate between 0.3 and 1.0
+
         // Mouse interaction
         const dx = mouseRef.current.x - star.x;
         const dy = mouseRef.current.y - star.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         const maxDist = 150;
 
-        let alpha = star.opacity;
+        let alpha = baseAlpha * star.opacity;
 
         if (distance < maxDist) {
           const force = (maxDist - distance) / maxDist;
           star.x -= dx * force * 0.03;
           star.y -= dy * force * 0.03;
-          alpha = Math.min(1, star.opacity + force * 0.5);
+          alpha = Math.min(1, alpha + force * 0.5);
         }
 
         ctx.beginPath();

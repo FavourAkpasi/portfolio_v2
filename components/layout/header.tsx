@@ -12,7 +12,7 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 export const Header = () => {
   const {activeLink, setActiveLink} = useActiveLink();
   const {theme, toggleTheme} = useTheme();
-  const { scrollProgress } = useActiveSectionContext();
+  const { scrollPercentage } = useActiveSectionContext();
 
   return (
     <header className="lg:h-svh">
@@ -35,17 +35,23 @@ export const Header = () => {
 
       <div className="hidden xl:block w-full max-w-[550px] h-full p-4 relative z-40">
         <div className="w-full h-full bg-accent dark:bg-sidebar rounded-xl p-9 flex flex-col relative overflow-hidden">
-           {/* Parallax Background */}
-           <div 
-            className="absolute inset-0 z-0 opacity-10 pointer-events-none"
-            style={{
-              backgroundImage: 'url(/images/animated-bg.gif)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              transform: `translateY(-${scrollProgress * 0.2}px) rotate(90deg) scale(1.5)`,
-              transition: 'transform 0.1s linear'
-            }}
-          />
+           {/* Dynamic Gradient Background */}
+           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+             <div 
+               className="absolute -top-[20%] -left-[20%] w-[70%] h-[70%] rounded-full bg-primary/10 blur-3xl"
+               style={{
+                 transform: `translateY(${scrollPercentage * 20}%) translateZ(0)`,
+                 transition: 'transform 0.1s linear'
+               }}
+             />
+             <div 
+               className="absolute -bottom-[20%] -right-[20%] w-[70%] h-[70%] rounded-full bg-blue-500/10 blur-3xl"
+               style={{
+                 transform: `translateY(-${scrollPercentage * 20}%) translateZ(0)`,
+                 transition: 'transform 0.1s linear'
+               }}
+             />
+           </div>
           
           <div className="flex-1 relative z-10">
             <Logo className="w-10 h-10" />
