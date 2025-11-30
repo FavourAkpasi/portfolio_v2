@@ -1,17 +1,17 @@
-import {LINKS, SOCIALS} from '@/lib/constants';
-import {Logo} from '../ui/logo';
-import {cn} from '@/lib/utils';
-import {useActiveLink} from '@/hooks/useActiveLink';
-import {Button} from '../ui/button';
-import {useTheme} from '@/hooks/useTheme';
-import { MoonIcon, SunIcon} from 'lucide-react';
-import {ContactForm} from '../sections/contact-form';
+import { LINKS, SOCIALS } from '@/lib/constants';
+import { Logo } from '../ui/logo';
+import { cn } from '@/lib/utils';
+import { useActiveLink } from '@/hooks/useActiveLink';
+import { Button } from '../ui/button';
+import { useTheme } from '@/hooks/useTheme';
+import { MoonIcon, SunIcon } from 'lucide-react';
+import { ContactForm } from '../sections/contact-form';
 import { FaFilePdf, FaRegFilePdf } from "react-icons/fa6";
 import { useActiveSectionContext } from '@/context/active-section-context';
 
 export const Header = () => {
-  const {activeLink, setActiveLink} = useActiveLink();
-  const {theme, toggleTheme} = useTheme();
+  const { activeLink, setActiveLink } = useActiveLink();
+  const { theme, toggleTheme } = useTheme();
   const { scrollPercentage } = useActiveSectionContext();
 
   return (
@@ -35,24 +35,24 @@ export const Header = () => {
 
       <div className="hidden xl:block w-full max-w-[550px] h-full p-4 relative z-40">
         <div className="w-full h-full bg-accent dark:bg-sidebar rounded-xl p-9 flex flex-col relative overflow-hidden">
-           {/* Dynamic Gradient Background */}
-           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-             <div 
-               className="absolute -top-[20%] -left-[20%] w-[70%] h-[70%] rounded-full bg-primary/10 blur-3xl"
-               style={{
-                 transform: `translateY(${scrollPercentage * 20}%) translateZ(0)`,
-                 transition: 'transform 0.1s linear'
-               }}
-             />
-             <div 
-               className="absolute -bottom-[20%] -right-[20%] w-[70%] h-[70%] rounded-full bg-blue-500/10 blur-3xl"
-               style={{
-                 transform: `translateY(-${scrollPercentage * 20}%) translateZ(0)`,
-                 transition: 'transform 0.1s linear'
-               }}
-             />
-           </div>
-          
+          {/* Dynamic Gradient Background */}
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div
+              className="absolute -top-[20%] -left-[20%] w-[70%] h-[70%] rounded-full bg-primary/10 blur-3xl"
+              style={{
+                transform: `translateY(${scrollPercentage * 20}%) translateZ(0)`,
+                transition: 'transform 0.1s linear'
+              }}
+            />
+            <div
+              className="absolute -bottom-[20%] -right-[20%] w-[70%] h-[70%] rounded-full bg-blue-500/10 blur-3xl"
+              style={{
+                transform: `translateY(-${scrollPercentage * 20}%) translateZ(0)`,
+                transition: 'transform 0.1s linear'
+              }}
+            />
+          </div>
+
           <div className="flex-1 relative z-10">
             <Logo className="w-10 h-10" />
             <h1 className="font-bold text-4xl mt-4">Favour Akpasi</h1>
@@ -63,7 +63,7 @@ export const Header = () => {
             </p>
             <div className="flex items-center gap-2 mt-6">
               <a
-                href="/docs/resume.pdf"
+                href="/docs/Favour_Akpasi_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -77,7 +77,7 @@ export const Header = () => {
             <ul className="flex flex-col mt-12">
               {LINKS.map((link, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  
+
                   <div
                     className={cn(
                       'flex items-center justify-center rounded-full border',

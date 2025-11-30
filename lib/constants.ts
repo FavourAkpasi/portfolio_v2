@@ -45,18 +45,31 @@ export const SOCIALS: ISocial[] = [
 
 export const EXPERIENCES: IExperience[] = [
   {
+    position: 'Senior Frontend Engineer',
+    company: 'Refinq GmbH',
+    start_date: '2024',
+    end_date: 'Present',
+    description:
+      'Led frontend development and DevOps for a nature and climate risk intelligence platform. Built responsive web applications using React and TypeScript, ensuring seamless user experiences for complex geospatial data visualization. Implemented comprehensive testing strategies with Vitest, MSW, and Playwright. Additionally, contributed to machine learning workflows by addressing data bias and managed Azure infrastructure to support the platform’s AI-driven insights.',
+    link: 'https://www.refinq.com/',
+    tags: ['Typescript', 'React.js', 'Azure', 'Vitest', 'Playwright', 'DevOps', 'Machine Learning'],
+  },
+  {
     position: 'Senior Fullstack Engineer',
     company: 'Foundary',
     start_date: '2020',
+    end_date: 'Present',
     description:
-      'Built and maintained high-performance web and mobile applications with React, Next.js, and React Native, powered by FastAPI and Django backends. Focused on crafting reusable components, optimizing performance, integrating machine learning models and delivering seamless user experiences.',
+      'Architected and delivered scalable digital solutions for diverse clients at a full-service development agency. Spearheaded frontend development using React, Next.js, and TypeScript, while building robust backends with Node.js/Express and Python/FastAPI. Integrated advanced machine learning models using PyTorch, TensorFlow, and MLX. Additionally, developed cross-platform mobile applications leveraging React Native and Swift to ensure native-grade performance.',
     link: 'https://foundary.dev/',
     tags: [
       'Typescript',
       'Next.js',
       'React.js',
-      'Node',
+      'Node.js',
+      'Express',
       'React Native',
+      'Swift',
       'Python',
       'FastAPI',
       'Pytorch',
@@ -65,41 +78,45 @@ export const EXPERIENCES: IExperience[] = [
     ],
   },
   {
-    position: 'Senior Frontend Engineer',
-    company: 'Refinq GmbH',
-    start_date: '2024',
+    position: 'Frontend Developer',
+    company: 'Nitax Technologies',
+    start_date: '2022',
+    end_date: '2023',
     description:
-      'Led frontend development for a cross-platform loyalty rewards platform, building responsive web and mobile apps with React, Next.js, TypeScript, React Native, and React Query while ensuring seamless user experience and reliable state management.',
-    link: 'https://www.getmelon.co/',
-    tags: ['Typescript', 'React.js', 'Azure', 'Vitest', 'React Query'],
+      'Developed user-centric frontend solutions for a technology company specializing in Mobile Value-Added Services (mVAS) and digital transformation. Built and maintained responsive web and mobile applications using React, Next.js, and React Native, supporting various business verticals including NXT Tech and NXT Medical. Collaborated with cross-functional teams to deliver scalable digital products that drive enterprise growth and enhance consumer satisfaction.',
+    link: 'https://nxt.ng/',
+    tags: [
+      'Typescript',
+      'Next.js',
+      'React.js',
+      'React Native',
+    ],
   },
 ];
 
 export const PROJECTS: IProject[] = [
   {
-    image: '/images/melon-website.png',
-    name: 'Melon Website',
-    description:
-      'The official marketing site for Melon — a rewards platform that helps users earn coins, track expenses, and discover partner deals. Designed to showcase the product’s features and make engagement effortless.',
-    website: 'https://getmelon.co/',
-    made_at: 'Melon Africa',
+    image: '/images/refinq.png',
+    name: 'Refinq',
+    description: 'Refinq is a nature and climate risk intelligence platform. Built with React and TypeScript, ensuring seamless user experiences for complex geospatial data visualization. It provides insights into the impact of climate change on natural ecosystems and helps users make informed decisions to protect the environment.',
+    website: 'https://www.refinq.com/',
+    made_at: 'Refinq GmbH',
   },
   {
-    image: '/images/melon-app.png',
-    name: 'Melon Mobile App',
+    image: '/images/betacare.png',
+    name: 'BetaCare',
     description:
-      'A rewards platform that lets users earn coins, track spending, and enjoy personalized shopping experiences through partner transactions. Designed to make everyday purchases more rewarding and engaging.',
-    website:
-      'https://play.google.com/store/apps/details?id=com.melonafrica.melon',
-    made_at: 'Melon Africa',
+      'BetaCare is a virtual healthcare platform designed to provide accessible and affordable primary healthcare services to Nigerians. It connects users with licensed doctors for instant consultations via video, audio, and chat, while also facilitating digital prescriptions and health records. Built with React and TypeScript, the platform ensures a seamless and responsive experience across devices, bridging the gap in healthcare accessibility.',
+    website: 'https://www.betacare.ng/',
+    made_at: 'Nitax Technologies',
   },
   {
-    image: '/images/melon-partners.png',
-    name: 'Melon Partners App',
+    image: '/images/asiko-energy.png',
+    name: 'Asiko Energy',
     description:
-      'A vendor platform that helps businesses boost customer loyalty, increase sales, and gain valuable insights. With Melon, partners can engage customers through rewards, personalized experiences, and data-driven growth tools — turning every purchase into lasting loyalty.',
-    website: 'https://partners.getmelon.co/',
-    made_at: 'Melon Africa',
+      'Kita is a comprehensive Vessel and Product Management platform built for Asiko Energy to monitor and manage vessels and oil tanks. Developed with React, TypeScript, and GraphQL, it scales to support over 1,000 registered vessels and 100+ products, handling 5,000+ daily API requests. The platform features efficient state management and automated testing, resulting in an 80% increase in application performance and improved operational efficiency.',
+    website: 'https://www.asikoenergy.com/',
+    made_at: 'Nitax Technologies',
   },
   {
     image: '/images/hashrails.png',
@@ -150,26 +167,27 @@ export const PROJECTS: IProject[] = [
     made_at: 'Foundary',
   },
   {
-    image: '/images/todopal.png',
-    name: 'TodoPal',
+    image: '/images/journal-buddy.png',
+    name: 'Journal Buddy',
     description:
-      'TodoPal is a simple and intuitive task management app that helps users organize, track, and complete their daily tasks efficiently. Built with React, TypeScript, and Redux Toolkit for a smooth and responsive experience.',
-    website: 'https://todopal.vercel.app/',
-    github: 'https://github.com/favourakpasi/todolist-mern',
+      'JournalBuddy is a web application that integrates OpenAI\'s language models to provide a unique journaling experience. It uses AI to analyze your entries, provide insights, and even suggest topics to write about.',
+    website: 'https://journalbuddy.netlify.app/login',
+    github: 'https://github.com/FavourAkpasi/journal-buddy-v1',
+    made_at: 'Foundary',
   },
 ];
 
 export const EDUCATION: IEducation[] = [
   {
-    logo: '/images/uniglos.jpg',
-    course: 'Msc Cybersecurity',
-    school: 'University of Gloucetershire',
-    start_date: '2025',
+    logo: '/images/jku-logo.jpg',
+    course: 'Msc Artificial Intelligence',
+    school: 'Johannes Kepler University',
+    start_date: '2023',
     end_date: '2026',
   },
   {
     logo: '/images/uniben.png',
-    course: 'BEng Electrical/Electronic Engineering',
+    course: 'BEng Petroleum Engineering',
     school: 'University of Benin',
     start_date: '2013',
     end_date: '2019',
