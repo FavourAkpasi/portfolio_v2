@@ -14,17 +14,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://emmanuelobeto.vercel.app'),
-  title: 'Emmanuel Obeto',
+  metadataBase: new URL('https://favourakpasi.vercel.app'),
+  title: 'Favour Akpasi',
   description:
-    'Frontend engineer crafting elegant, user-focused web experiences with React, Next.js, and TypeScript.',
+    'Software engineer crafting elegant, user-focused web and mobile experiences with Javascript and Python.',
   keywords: [
-    'Emmanuel Obeto',
-    'Frontend Engineer',
+    'Favour Akpasi',
+    'Software Engineer',
     'React Developer',
     'Next.js',
     'TypeScript',
     'Software Engineer',
+    'Python Developer',
+    'Machine Learning Engineer',
     'Portfolio',
   ],
   robots: 'index, follow',

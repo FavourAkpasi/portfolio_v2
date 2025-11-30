@@ -6,8 +6,9 @@ import {cn} from '@/lib/utils';
 import {useActiveLink} from '@/hooks/useActiveLink';
 import {Button} from '../ui/button';
 import {useTheme} from '@/hooks/useTheme';
-import {ChevronRight, MoonIcon, SunIcon} from 'lucide-react';
+import { MoonIcon, SunIcon} from 'lucide-react';
 import {ContactForm} from '../sections/contact-form';
+import { FaRegFilePdf } from 'react-icons/fa';
 
 export const Header = () => {
   const {activeLink, setActiveLink} = useActiveLink();
@@ -16,16 +17,16 @@ export const Header = () => {
   return (
     <header className="lg:h-svh">
       <div className="lg:hidden w-full py-6 px-4">
-        <h1 className="font-bold text-4xl mt-4">Emmanuel Obeto</h1>
+        <h1 className="font-bold text-4xl mt-4">Favour Akpasi</h1>
         <h2 className="font-medium text-lg mt-2">Software Engineer</h2>
         <p className="mt-4 text-muted-foreground">
-          Passionate about crafting intuitive products that blend design and
-          technology seamlessly.
+          Passionate about crafting intuitive solutions that seamlessly blend design and
+          technology.
         </p>
         <div className="flex items-center gap-2 mt-6">
           <a href="/docs/resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button>
-              View Resume <ChevronRight />
+              View Resume <FaRegFilePdf />
             </Button>
           </a>
           <ContactForm />
@@ -36,11 +37,11 @@ export const Header = () => {
         <div className="w-full h-full bg-accent dark:bg-sidebar rounded-xl p-9 flex flex-col">
           <div className="flex-1">
             <Logo className="w-10 h-10" />
-            <h1 className="font-bold text-4xl mt-4">Emmanuel Obeto</h1>
+            <h1 className="font-bold text-4xl mt-4">Favour Akpasi</h1>
             <h2 className="font-medium text-lg mt-2">Software Engineer</h2>
             <p className="mt-4 text-muted-foreground">
-              Passionate about crafting intuitive products that blend design and
-              technology seamlessly.
+              Passionate about crafting intuitive solutions that seamlessly blend design and
+              technology.
             </p>
             <div className="flex items-center gap-2 mt-6">
               <a
@@ -49,7 +50,7 @@ export const Header = () => {
                 rel="noopener noreferrer"
               >
                 <Button>
-                  View Resume <ChevronRight />
+                  View Resume <FaRegFilePdf />
                 </Button>
               </a>
               <ContactForm />
@@ -58,6 +59,7 @@ export const Header = () => {
             <ul className="flex flex-col mt-12">
               {LINKS.map((link, index) => (
                 <li key={index} className="flex items-center gap-3">
+                  
                   <div
                     className={cn(
                       'w-4 h-4 flex items-center justify-center rounded-full border',
@@ -80,7 +82,7 @@ export const Header = () => {
                     className={cn(
                       'h-9 flex items-center text-sm',
                       activeLink === link.href
-                        ? 'rounded-md text-primary font-medium'
+                        ? 'rounded-md text-lg font-medium'
                         : 'text-muted-foreground hover:text-foreground',
                     )}
                     onClick={() => setActiveLink(link.href)}

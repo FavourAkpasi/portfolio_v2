@@ -1,37 +1,45 @@
-import {IEducation, IExperience, ILink, IProject, ISocial} from '@/types';
-import {FaGithub, FaLinkedin, FaInstagram} from 'react-icons/fa';
+import { IEducation, IExperience, ILink, IProject, ISocial } from '@/types';
+import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaUser, FaBriefcase, FaLaptop, FaGraduationCap } from 'react-icons/fa';
 
 export const LINKS: ILink[] = [
   {
     name: 'About',
     href: '#about',
+    icon: FaUser,
   },
   {
     name: 'Experience',
     href: '#experience',
+    icon: FaBriefcase,
   },
   {
     name: 'Projects',
     href: '#projects',
+    icon: FaLaptop,
   },
   {
     name: 'Education',
     href: '#education',
+    icon: FaGraduationCap,
   },
 ];
 
 export const SOCIALS: ISocial[] = [
   {
     icon: FaGithub,
-    href: 'https://github.com/nuelobeto/',
+    href: 'https://github.com/favourakpasi/',
   },
   {
     icon: FaLinkedin,
-    href: 'https://www.linkedin.com/in/nuel-obeto/',
+    href: 'https://www.linkedin.com/in/favourakpasi/',
   },
   {
     icon: FaInstagram,
-    href: 'https://www.instagram.com/nuelobeto/',
+    href: 'https://www.instagram.com/akpasifavour/',
+  },
+  {
+    icon: FaTwitter,
+    href: 'https://twitter.com/favourakpasi',
   },
 ];
 
@@ -40,29 +48,30 @@ export const EXPERIENCES: IExperience[] = [
     position: 'Senior Fullstack Engineer',
     company: 'Foundary',
     start_date: '2020',
-    end_date: '2025',
     description:
-      'Built and maintained high-performance web and mobile applications with React, Next.js, and React Native, powered by FastAPI and Django backends. Focused on crafting reusable components, optimizing performance, and delivering seamless user experiences.',
+      'Built and maintained high-performance web and mobile applications with React, Next.js, and React Native, powered by FastAPI and Django backends. Focused on crafting reusable components, optimizing performance, integrating machine learning models and delivering seamless user experiences.',
     link: 'https://foundary.dev/',
     tags: [
       'Typescript',
       'Next.js',
       'React.js',
-      'React Query',
-      'Redux',
+      'Node',
       'React Native',
       'Python',
-      'Node',
+      'FastAPI',
+      'Pytorch',
+      'Tensorflow',
+      'MLX',
     ],
   },
   {
     position: 'Senior Frontend Engineer',
-    company: 'Melon Africa',
+    company: 'Refinq GmbH',
     start_date: '2024',
     description:
       'Led frontend development for a cross-platform loyalty rewards platform, building responsive web and mobile apps with React, Next.js, TypeScript, React Native, and React Query while ensuring seamless user experience and reliable state management.',
     link: 'https://www.getmelon.co/',
-    tags: ['Typescript', 'Next.js', 'React.js', 'React Query', 'React Native'],
+    tags: ['Typescript', 'React.js', 'Azure', 'Vitest', 'React Query'],
   },
 ];
 
@@ -146,7 +155,7 @@ export const PROJECTS: IProject[] = [
     description:
       'TodoPal is a simple and intuitive task management app that helps users organize, track, and complete their daily tasks efficiently. Built with React, TypeScript, and Redux Toolkit for a smooth and responsive experience.',
     website: 'https://todopal.vercel.app/',
-    github: 'https://github.com/nuelobeto/redux-toolkit-react-ts',
+    github: 'https://github.com/favourakpasi/todolist-mern',
   },
 ];
 
