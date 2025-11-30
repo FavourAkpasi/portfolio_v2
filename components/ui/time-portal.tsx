@@ -39,7 +39,7 @@ export const TimePortal = () => {
                     <div className="relative bg-card/90 backdrop-blur-sm rounded-xl p-6 h-full overflow-hidden">
                         <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
                             <Image
-                                src="/images/Time-Portal.gif"
+                                src="/images/time-portal.gif"
                                 alt="Portal Background"
                                 fill
                                 className="object-cover blur-xs"
