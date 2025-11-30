@@ -8,6 +8,7 @@ import { MoonIcon, SunIcon } from 'lucide-react';
 import { ContactForm } from '../sections/contact-form';
 import { FaFilePdf, FaRegFilePdf } from "react-icons/fa6";
 import { useActiveSectionContext } from '@/context/active-section-context';
+import { TimePortal } from '../ui/time-portal';
 
 export const Header = () => {
   const { activeLink, setActiveLink } = useActiveLink();
@@ -131,14 +132,17 @@ export const Header = () => {
               ))}
             </ul>
 
-            <Button
-              variant="secondary"
-              size="icon"
-              className="border"
-              onClick={() => toggleTheme()}
-            >
-              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-            </Button>
+            <div className="ml-auto flex items-center gap-2">
+              <Button
+                variant="secondary"
+                size="icon"
+                className="border"
+                onClick={() => toggleTheme()}
+              >
+                {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+              </Button>
+              <TimePortal />
+            </div>
           </div>
         </div>
       </div>
