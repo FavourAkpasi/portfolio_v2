@@ -8,7 +8,7 @@ import {Button} from '../ui/button';
 import {useTheme} from '@/hooks/useTheme';
 import { MoonIcon, SunIcon} from 'lucide-react';
 import {ContactForm} from '../sections/contact-form';
-import { FaRegFilePdf } from 'react-icons/fa';
+import { FaFilePdf, FaRegFilePdf } from "react-icons/fa6";
 
 export const Header = () => {
   const {activeLink, setActiveLink} = useActiveLink();
@@ -26,7 +26,7 @@ export const Header = () => {
         <div className="flex items-center gap-2 mt-6">
           <a href="/docs/resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button>
-              View Resume <FaRegFilePdf />
+              View Resume <FaFilePdf />
             </Button>
           </a>
           <ContactForm />
@@ -62,20 +62,23 @@ export const Header = () => {
                   
                   <div
                     className={cn(
-                      'w-4 h-4 flex items-center justify-center rounded-full border',
+                      'flex items-center justify-center rounded-full border',
                       activeLink === link.href
-                        ? 'border-primary'
-                        : 'border-neutral-400 dark:border-border',
+                        ? 'border-primary w-6 h-6'
+                        : 'border-neutral-400 dark:border-border w-4 h-4',
                     )}
                   >
-                    <div
+                    {/* <div
                       className={cn(
                         'w-2.5 h-2.5 rounded-full',
                         activeLink === link.href
                           ? 'bg-primary'
                           : 'bg-neutral-400 dark:bg-border',
                       )}
-                    />
+                    /> */}
+                    {activeLink === link.href && (
+                      <link.icon className="w-5 h-5 text-primary" />
+                    )}
                   </div>
                   <a
                     href={link.href}
