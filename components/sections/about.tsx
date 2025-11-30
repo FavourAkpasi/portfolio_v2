@@ -22,13 +22,13 @@ export const About = () => {
         <p>
           I enjoy leveraging the latest technologies - especially in the
           JavaScript and Python ecosystems - for building scalable and maintainable
-          software solutions. I enjoy designing reusable components, refining
-          interactions, and writing code that balances efficiency with clarity.
+          software solutions. I enjoy designing reusable components, refining interactions, improving flows
+          and writing code that balances efficiency with usability.
           Collaboration is important to me and I value working closely with designers,
           developers, product owners, and stakeholders to take solutions from ideas to services.
         </p>
         <p>
-          I am Currently a Senior Software Engineer at Refinq GmbH, Austria.
+          I am currently a senior software engineer at Refinq GmbH, Austria.
           I am not actively looking for a new role at the moment, but I am open to discussions
           about potential opportunities.
         </p>

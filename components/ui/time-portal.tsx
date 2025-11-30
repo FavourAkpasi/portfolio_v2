@@ -9,7 +9,7 @@ import {
     DialogTrigger,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { History, Sparkles } from 'lucide-react';
+import { History } from 'lucide-react';
 import Image from 'next/image';
 
 const ARCHIVES = [
@@ -25,8 +25,13 @@ const ARCHIVES = [
 export const TimePortal = () => {
     return (
         <Dialog>
-            <DialogTrigger asChild className='rounded-full w-10 h-10 border border-2 animate-pulse cursor-pointer'>
-                <Image src="/images/portal.jpg" alt="Time Portal" width={50} height={50} />
+            <DialogTrigger asChild>
+                <Button
+                    variant="secondary"
+                    size="icon"
+                    className="border">
+                    <History className="w-6 h-6 text-primary" />
+                </Button>
             </DialogTrigger>
             <DialogContent className="p-0 border-0 bg-transparent shadow-none sm:max-w-2xl overflow-visible">
                 <div className="relative rounded-xl p-[2px] overflow-hidden">
@@ -34,7 +39,7 @@ export const TimePortal = () => {
                     <div className="relative bg-card/90 backdrop-blur-sm rounded-xl p-6 h-full overflow-hidden">
                         <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
                             <Image
-                                src="/images/animate-portal.gif"
+                                src="/images/Time-Portal.gif"
                                 alt="Portal Background"
                                 fill
                                 className="object-cover blur-xs"
@@ -82,7 +87,7 @@ export const TimePortal = () => {
                                                 {archive.description}
                                             </p>
                                             <Button
-                                                variant="secondary"
+                                                variant="default"
                                                 className="w-full mt-2 group-hover/card:bg-primary group-hover/card:text-primary-foreground transition-colors"
                                                 asChild
                                             >
