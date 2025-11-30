@@ -1,8 +1,12 @@
-import { LINKS } from "@/lib/constants";
-import { useState } from "react";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export const useActiveLink = () => {
-	const [activeLink, setActiveLink] = useState<string>(LINKS[0]?.href || "");
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
-	return { activeLink, setActiveLink };
+  const setActiveLink = (href: string) => {
+    setActiveSection(href);
+    setTimeOfLastClick(Date.now());
+  };
+
+  return { activeLink: activeSection, setActiveLink };
 };

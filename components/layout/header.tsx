@@ -33,7 +33,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="hidden xl:block w-full max-w-[550px] h-full p-4">
+      <div className="hidden xl:block w-full max-w-[550px] h-full p-4 relative z-40">
         <div className="w-full h-full bg-accent dark:bg-sidebar rounded-xl p-9 flex flex-col">
           <div className="flex-1">
             <Logo className="w-10 h-10" />

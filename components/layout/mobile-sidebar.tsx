@@ -65,7 +65,7 @@ export const MobileSidebar = () => {
             {SOCIALS.map((social, index) => (
               <li key={index}>
                 <a
-                  href="http://"
+                  href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="[&_svg:not([class*='size-'])]:size-6 text-muted-foreground"
