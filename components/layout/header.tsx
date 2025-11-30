@@ -1,5 +1,3 @@
-'use client';
-
 import {LINKS, SOCIALS} from '@/lib/constants';
 import {Logo} from '../ui/logo';
 import {cn} from '@/lib/utils';
@@ -9,10 +7,12 @@ import {useTheme} from '@/hooks/useTheme';
 import { MoonIcon, SunIcon} from 'lucide-react';
 import {ContactForm} from '../sections/contact-form';
 import { FaFilePdf, FaRegFilePdf } from "react-icons/fa6";
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export const Header = () => {
   const {activeLink, setActiveLink} = useActiveLink();
   const {theme, toggleTheme} = useTheme();
+  const { scrollProgress } = useActiveSectionContext();
 
   return (
     <header className="lg:h-svh">
@@ -34,8 +34,20 @@ export const Header = () => {
       </div>
 
       <div className="hidden xl:block w-full max-w-[550px] h-full p-4 relative z-40">
-        <div className="w-full h-full bg-accent dark:bg-sidebar rounded-xl p-9 flex flex-col">
-          <div className="flex-1">
+        <div className="w-full h-full bg-accent dark:bg-sidebar rounded-xl p-9 flex flex-col relative overflow-hidden">
+           {/* Parallax Background */}
+           <div 
+            className="absolute inset-0 z-0 opacity-10 pointer-events-none"
+            style={{
+              backgroundImage: 'url(/images/animated-bg.gif)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              transform: `translateY(-${scrollProgress * 0.2}px) rotate(90deg) scale(1.5)`,
+              transition: 'transform 0.1s linear'
+            }}
+          />
+          
+          <div className="flex-1 relative z-10">
             <Logo className="w-10 h-10" />
             <h1 className="font-bold text-4xl mt-4">Favour Akpasi</h1>
             <h2 className="font-medium text-lg mt-2">Software Engineer</h2>
@@ -97,7 +109,7 @@ export const Header = () => {
             </ul>
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between relative z-10">
             <ul className="flex items-center gap-8">
               {SOCIALS.map((social, index) => (
                 <li key={index}>
