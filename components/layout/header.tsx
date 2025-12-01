@@ -16,16 +16,15 @@ export const Header = () => {
   const { scrollPercentage } = useActiveSectionContext();
 
   return (
-    <header className="lg:h-svh">
-      <div className="lg:hidden w-full py-6 px-4">
+    <header className="xl:h-svh">
+      <div className="xl:hidden w-full lg:max-w-[750px] lg:mx-auto py-6 px-4">
         <h1 className="font-bold text-4xl mt-4">Favour Akpasi</h1>
         <h2 className="font-medium text-lg mt-2">Software Engineer</h2>
         <p className="mt-4 text-muted-foreground">
-          Passionate about crafting intuitive solutions that seamlessly blend design and
-          technology.
+          Building intuitive solutions that blends design and technology.
         </p>
         <div className="flex items-center gap-2 mt-6">
-          <a href="/docs/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/docs/favour_akpasi_resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button>
               View Resume <FaFilePdf />
             </Button>
@@ -39,14 +38,14 @@ export const Header = () => {
           {/* Dynamic Gradient Background */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <div
-              className="absolute -top-[20%] -left-[20%] w-[70%] h-[70%] rounded-full bg-primary/10 blur-3xl"
+              className="absolute -top-[20%] -left-[20%] w-[70%] h-[70%] rounded-full bg-primary/20 blur-3xl"
               style={{
-                transform: `translateY(${scrollPercentage * 20}%) translateZ(0)`,
+                transform: `translateY(${scrollPercentage * 30}%) translateZ(0)`,
                 transition: 'transform 0.1s linear'
               }}
             />
             <div
-              className="absolute -bottom-[20%] -right-[20%] w-[70%] h-[70%] rounded-full bg-blue-500/10 blur-3xl"
+              className="absolute -bottom-[20%] -right-[20%] w-[70%] h-[70%] rounded-full bg-blue-500/30 blur-3xl"
               style={{
                 transform: `translateY(-${scrollPercentage * 20}%) translateZ(0)`,
                 transition: 'transform 0.1s linear'

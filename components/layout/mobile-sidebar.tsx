@@ -8,16 +8,17 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import {MenuIcon, XIcon} from 'lucide-react';
-import {Logo} from '../ui/logo';
-import {ScrollArea} from '@/components/ui/scroll-area';
-import {LINKS, SOCIALS} from '@/lib/constants';
-import {useActiveLink} from '@/hooks/useActiveLink';
-import {cn} from '@/lib/utils';
-import {useState} from 'react';
+import { MenuIcon, XIcon } from 'lucide-react';
+import { Logo } from '../ui/logo';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { LINKS, SOCIALS } from '@/lib/constants';
+import { useActiveLink } from '@/hooks/useActiveLink';
+import { cn } from '@/lib/utils';
+import { useState } from 'react';
+import { TimePortal } from '../ui/time-portal';
 
 export const MobileSidebar = () => {
-  const {activeLink, setActiveLink} = useActiveLink();
+  const { activeLink, setActiveLink } = useActiveLink();
   const [open, setOpen] = useState(false);
 
   return (
@@ -75,6 +76,7 @@ export const MobileSidebar = () => {
               </li>
             ))}
           </ul>
+          <TimePortal />
         </SheetFooter>
       </SheetContent>
     </Sheet>

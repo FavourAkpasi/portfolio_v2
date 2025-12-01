@@ -22,8 +22,8 @@ export const About = () => {
         <p>
           I enjoy leveraging the latest technologies - especially in the
           JavaScript and Python ecosystems - for building scalable and maintainable
-          software solutions. I enjoy designing reusable components, refining interactions, improving flows
-          and writing code that balances efficiency with usability.
+          software solutions. I design reusable components, refine interactions, improve flows
+          and write code that balances efficiency with usability.
           Collaboration is important to me and I value working closely with designers,
           developers, product owners, and stakeholders to take solutions from ideas to services.
         </p>

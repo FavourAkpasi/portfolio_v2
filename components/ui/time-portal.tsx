@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { History } from 'lucide-react';
 import Image from 'next/image';
+import { FaDoorOpen } from 'react-icons/fa';
 
 const ARCHIVES = [
     {
@@ -30,7 +31,7 @@ export const TimePortal = () => {
                     variant="secondary"
                     size="icon"
                     className="border">
-                    <History className="w-6 h-6 text-primary" />
+                    <FaDoorOpen className="w-7 h-7" />
                 </Button>
             </DialogTrigger>
             <DialogContent className="p-0 border-0 bg-transparent shadow-none sm:max-w-2xl overflow-visible">
@@ -53,7 +54,7 @@ export const TimePortal = () => {
                                     Time Travel
                                 </DialogTitle>
                                 <DialogDescription>
-                                    Step into the portal and revisit previous versions of my portfolio.
+                                    Step into the totally real magic portal to revisit previous versions of my portfolio.
                                 </DialogDescription>
                             </DialogHeader>
 

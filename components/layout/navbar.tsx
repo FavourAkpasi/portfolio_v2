@@ -9,6 +9,7 @@ import { LINKS } from "@/lib/constants";
 import { useActiveLink } from "@/hooks/useActiveLink";
 import { cn } from "@/lib/utils";
 
+
 export const Navbar = () => {
 	const { theme, toggleTheme } = useTheme();
 	const { activeLink, setActiveLink } = useActiveLink();
@@ -36,7 +37,6 @@ export const Navbar = () => {
 					))}
 				</ul>
 			</div>
-
 			<Button
 				variant="secondary"
 				size="icon"
