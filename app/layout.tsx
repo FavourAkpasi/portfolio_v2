@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://favourakpasi.com'),
-  title: 'Favour Akpasi',
+  title: 'Favour Akpasi | Software Engineer',
   description:
     'Software engineer crafting elegant, user-focused web and mobile solutions with Javascript and Python.',
   keywords: [
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   ],
   robots: 'index, follow',
   openGraph: {
-    title: 'Favour Akpasi',
+    title: 'Favour Akpasi | Software Engineer',
     description:
-      'Software engineer crafting elegant, user-focused web and mobile experiences with Javascript and Python.',
+      'Software engineer crafting elegant, user-focused web and mobile solutions with Javascript and Python.',
     url: 'https://favourakpasi.com',
     siteName: 'Favour Akpasi',
     locale: 'en_US',
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Favour Akpasi',
+    title: 'Favour Akpasi | Software Engineer',
     description:
-      'Software engineer crafting elegant, user-focused web and mobile experiences with Javascript and Python.',
+      'Software engineer crafting elegant, user-focused web and mobile solutions with Javascript and Python.',
   },
 };
 

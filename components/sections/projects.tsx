@@ -14,7 +14,7 @@ export const Projects = () => {
 				{PROJECTS.map((project, index) => (
 					<div
 						key={index}
-						className="group relative rounded-xl p-[2px] overflow-hidden transition-all duration-300 hover:shadow-lg"
+						className="group relative rounded-xl p-[2px] overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105"
 					>
 						<div className="absolute inset-[-100%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF0000_0%,#FFFF00_17%,#00FF00_33%,#00FFFF_50%,#0000FF_67%,#FF00FF_83%,#FF0000_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
 						<Card className="relative h-full flex flex-col sm:flex-row items-start gap-4 p-3 bg-card rounded-xl border-0">
@@ -59,7 +59,7 @@ export const Projects = () => {
 									</div>
 								</div>
 
-								<p className="mt-3 text-muted-foreground sm:text-sm">
+								<p className="mt-3 text-muted-foreground sm:text-sm line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
 									{project.description}
 								</p>
 							</div>

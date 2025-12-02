@@ -159,6 +159,14 @@ export const PROJECTS: IProject[] = [
     made_at: 'Foundary',
   },
   {
+    image: '/images/qotat.png',
+    name: 'Qotat',
+    description:
+      'Qotat helps service professionals manage their business so they can focus on their craft. It provides a web and mobile app to create professional profiles, share unique booking links for easy scheduling, and get paid faster with secure payment options. Features include job documentation, team collaboration, and verified profiles to build client trust.',
+    website: 'https://qotat-website.onrender.com',
+    made_at: 'Foundary',
+  },
+  {
     image: '/images/escape.png',
     name: 'The Escape Lounge',
     description:
