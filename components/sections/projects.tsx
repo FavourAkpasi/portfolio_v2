@@ -59,7 +59,7 @@ export const Projects = () => {
 									</div>
 								</div>
 
-								<p className="mt-3 text-muted-foreground sm:text-sm line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
+								<p className="mt-3 text-muted-foreground sm:text-sm md:line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
 									{project.description}
 								</p>
 							</div>
