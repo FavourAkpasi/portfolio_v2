@@ -22,25 +22,6 @@ const ARCHIVES = [
         description: 'The first iteration. Built with TypeScript and React JS.',
         link: 'https://favourakpasi.netlify.app',
     },
-    {
-        version: 'v1.0',
-        year: '2022',
-        image: '/images/portfolio-v1.png',
-        description: 'The first iteration. Built with TypeScript and React JS.',
-        link: 'https://favourakpasi.netlify.app',
-    }, {
-        version: 'v1.0',
-        year: '2022',
-        image: '/images/portfolio-v1.png',
-        description: 'The first iteration. Built with TypeScript and React JS.',
-        link: 'https://favourakpasi.netlify.app',
-    }, {
-        version: 'v1.0',
-        year: '2022',
-        image: '/images/portfolio-v1.png',
-        description: 'The first iteration. Built with TypeScript and React JS.',
-        link: 'https://favourakpasi.netlify.app',
-    },
 ];
 
 export const TimePortal = () => {
@@ -83,7 +64,7 @@ export const TimePortal = () => {
                                     href={archive.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="shadow-md border border-black/20 w-40 rounded-md overflow-hidden hover:scale-110 transition-all duration-500 ease-in-out"
+                                    className="shadow-md border border-black/30 w-48 rounded-md overflow-hidden hover:scale-110 transition-all duration-500 ease-in-out"
                                 >
                                     <div className="relative aspect-video overflow-hidden">
                                         <Image
