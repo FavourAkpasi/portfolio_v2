@@ -30,7 +30,7 @@
   width: 3em;
   height: 3em;
   border-radius: 90% 95% 85% 105%;
-  background: #0f0;
+  background: #87f387;
   mix-blend-mode: screen;
   filter: hue-rotate(0deg);
   animation: wobble calc(var(--speed) * var(--t)) linear infinite;

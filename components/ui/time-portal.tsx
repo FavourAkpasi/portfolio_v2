@@ -2,7 +2,6 @@
 
 import {
     Dialog,
-    DialogClose,
     DialogContent,
     DialogDescription,
     DialogHeader,
@@ -60,8 +59,10 @@ export const TimePortal = () => {
 
                 {/* Content Overlay */}
                 <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none max-w-[600px] mx-auto">
-                    <div className="pointer-events-auto space-y-8 animate-in fade-in zoom-in duration-500 delay-300">
-                        <p className="text-gray-700 text-xs md:text-xl font-bold text-center"> Curious about growth? <br /> Travel back in time...</p>
+                    <div className="pointer-events-auto space-y-8 animate-in zoom-in fade-in duration-700">
+                        <p className="text-gray-700 text-xs md:text-xl font-bold text-center tracking-tight">
+                            Curious about growth? <br /> Travel back in time...
+                        </p>
 
 
                         <div className="flex flex-wrap justify-center gap-8">
@@ -71,7 +72,7 @@ export const TimePortal = () => {
                                     href={archive.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="shadow-md border border-black/30 w-24 md:w-48 rounded-md overflow-hidden hover:scale-110 transition-all duration-500 ease-in-out"
+                                    className="shadow-md border border-black/30 w-24 md:w-48 rounded-md overflow-hidden hover:scale-105 transition-all duration-500 ease-out"
                                 >
                                     <div className="relative aspect-video overflow-hidden p-1">
                                         <Image
