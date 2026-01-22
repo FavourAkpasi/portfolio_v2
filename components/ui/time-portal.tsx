@@ -2,6 +2,7 @@
 
 import {
     Dialog,
+    DialogClose,
     DialogContent,
     DialogDescription,
     DialogHeader,
@@ -11,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button';
 
 import Image from 'next/image';
-import { FaDoorOpen } from 'react-icons/fa';
+import { FaDoorClosed, FaDoorOpen } from 'react-icons/fa';
 import styles from './time-portal.module.css';
 
 const ARCHIVES = [
@@ -41,7 +42,12 @@ export const TimePortal = () => {
                     <FaDoorOpen className="w-7 h-7 animate-pulse" />
                 </Button>
             </DialogTrigger>
-            <DialogContent className="p-0 border-0 bg-black/50 shadow-none min-w-full w-screen h-screen m-0 rounded-none overflow-hidden sm:rounded-none">
+            <DialogContent className="p-0 border-0 bg-black/50 shadow-none min-w-full min-h-full m-0 rounded-none overflow-hidden sm:rounded-none">
+                {/* <DialogClose asChild>
+                    <Button variant="ghost" size="icon">
+                        <FaDoorClosed className="w-7 h-7 animate-pulse" />
+                    </Button>
+                </DialogClose> */}
 
                 {/* Wormhole Animation Container */}
                 <div className={styles.portalContainer}>
@@ -55,7 +61,8 @@ export const TimePortal = () => {
                 {/* Content Overlay */}
                 <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none max-w-[600px] mx-auto">
                     <div className="pointer-events-auto space-y-8 animate-in fade-in zoom-in duration-500 delay-300">
-                        <p className="text-black text-xl font-bold text-center"> see older versions of my portfolio</p>
+                        <p className="text-gray-700 text-xs md:text-xl font-bold text-center"> Curious about growth? <br /> Travel back in time...</p>
+
 
                         <div className="flex flex-wrap justify-center gap-8">
                             {ARCHIVES.map((archive, index) => (
@@ -64,9 +71,9 @@ export const TimePortal = () => {
                                     href={archive.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="shadow-md border border-black/30 w-48 rounded-md overflow-hidden hover:scale-110 transition-all duration-500 ease-in-out"
+                                    className="shadow-md border border-black/30 w-24 md:w-48 rounded-md overflow-hidden hover:scale-110 transition-all duration-500 ease-in-out"
                                 >
-                                    <div className="relative aspect-video overflow-hidden">
+                                    <div className="relative aspect-video overflow-hidden p-1">
                                         <Image
                                             src={archive.image}
                                             alt={`Portfolio ${archive.version}`}
