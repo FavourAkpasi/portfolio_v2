@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 export const Projects = () => {
 	return (
 		<section id={LINKS[2].href.replace("#", "")} className="pt-16">
-			<h2 className="font-semibold text-2xl">Projects</h2>
+			<h2 className="font-semibold text-2xl">Products</h2>
 
 			<div className="mt-12 space-y-10">
 				{PROJECTS.map((project, index) => (

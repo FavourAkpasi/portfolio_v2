@@ -13,8 +13,8 @@ export const LINKS: ILink[] = [
     icon: FaBriefcase,
   },
   {
-    name: 'Projects',
-    href: '#projects',
+    name: 'Products',
+    href: '#products',
     icon: FaLaptop,
   },
   {
