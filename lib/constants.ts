@@ -50,9 +50,9 @@ export const EXPERIENCES: IExperience[] = [
     start_date: '2024',
     end_date: 'Present',
     description:
-      'Led frontend development and DevOps for a nature and climate risk intelligence platform. Built responsive web applications using React and TypeScript, ensuring seamless user experiences for complex geospatial data visualization. Implemented comprehensive testing strategies with Vitest, MSW, and Playwright. Additionally, contributed to machine learning workflows by addressing data bias and managed Azure infrastructure to support the platform’s AI-driven insights.',
+      'Lead frontend development and DevOps for the nature and climate risk intelligence platform. Build highly scalable web application for interpreting, understanding and visualizing complex geospatial data. Work closely with cross-functional teams including developers, scientists, and product managers to deliver a scalable digital product that focuses on user experience and accessibility. Contribute to machine learning workflows by correcting data bias and managing Azure infrastructure to support the platform’s AI-driven insights.',
     link: 'https://www.refinq.com/',
-    tags: ['Typescript', 'React.js', 'Azure', 'Vitest', 'Playwright', 'DevOps', 'Machine Learning'],
+    tags: ['Typescript', 'React.js', 'Azure', 'DevOps', 'Vitest', 'Playwright', 'Machine Learning'],
   },
   {
     position: 'Senior Fullstack Engineer',
@@ -60,7 +60,7 @@ export const EXPERIENCES: IExperience[] = [
     start_date: '2020',
     end_date: 'Present',
     description:
-      'Architected and delivered scalable digital solutions for diverse clients at a full-service development agency. Spearheaded frontend development using React, Next.js, and TypeScript, while building robust backends with Node.js/Express and Python/FastAPI. Integrated advanced machine learning models using PyTorch, TensorFlow, and MLX. Additionally, developed cross-platform mobile applications leveraging React Native and Swift to ensure native-grade performance.',
+      'Built and delivered high quality scalable digital solutions for diverse clients. Lead development of design systems, web and mobile applications for an array of industries including ESG, finance, energy and retail. Integrated advanced machine learning models for data analysis, optimization and automation of processes and workflows.',
     link: 'https://foundary.dev/',
     tags: [
       'Typescript',
@@ -83,7 +83,7 @@ export const EXPERIENCES: IExperience[] = [
     start_date: '2022',
     end_date: '2023',
     description:
-      'Developed user-centric frontend solutions for a technology company specializing in Mobile Value-Added Services (mVAS) and digital transformation. Built and maintained responsive web and mobile applications using React, Next.js, and React Native, supporting various business verticals including NXT Tech and NXT Medical. Collaborated with cross-functional teams to deliver scalable digital products that drive enterprise growth and enhance consumer satisfaction.',
+      'Developed user-centric frontend solutions focused on Mobile Value-Added Services (mVAS) and digital transformation. Built and maintained responsive web applications supporting various business verticals including NXT Tech and NXT Medical. Collaborated with cross-functional teams including developers, product managers, and designers to deliver beautiful and scalable digital products that focus on user experience and accessibility.',
     link: 'https://nxt.ng/',
     tags: [
       'Typescript',
@@ -98,7 +98,7 @@ export const PROJECTS: IProject[] = [
   {
     image: '/images/refinq.png',
     name: 'Refinq',
-    description: 'Refinq is a nature and climate risk intelligence platform. Built with React and TypeScript, ensuring seamless user experiences for complex geospatial data visualization. It provides insights into the impact of climate change on natural ecosystems and helps users make informed decisions to protect the environment.',
+    description: 'Refinq is a nature and climate risk intelligence platform. It helps companies understand and manage the financial risks associated with climate change and biodiversity loss. Built for CFOs, risk managers, and ESG (Environmental, Social, and Governance) teams in sectors like energy, infrastructure, manufacturing, and retail, the solution aggregates fragmented data on climate and biodiversity and translates it into actionable financial insights.',
     website: 'https://www.refinq.com/',
     made_at: 'Refinq GmbH',
   },
@@ -106,7 +106,7 @@ export const PROJECTS: IProject[] = [
     image: '/images/betacare.png',
     name: 'BetaCare',
     description:
-      'BetaCare is a virtual healthcare platform designed to provide accessible and affordable primary healthcare services to Nigerians. It connects users with licensed doctors for instant consultations via video, audio, and chat, while also facilitating digital prescriptions and health records. Built with React and TypeScript, the platform ensures a seamless and responsive experience across devices, bridging the gap in healthcare accessibility.',
+      'BetaCare is a virtual healthcare platform designed to provide accessible and affordable primary healthcare services to sub-Saharan Africans. It connects users with licensed doctors for instant consultations via video, audio, and chat, facilitating digital prescriptions and preliminary diagnosis. The platform ensures a seamless user experience across devices, bridging the gap in healthcare accessibility.',
     website: 'https://www.betacare.ng/',
     made_at: 'Nitax Technologies',
   },
