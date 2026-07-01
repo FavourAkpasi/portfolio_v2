@@ -58,10 +58,10 @@ export const EXPERIENCES: IExperience[] = [
     position: 'Senior Fullstack Engineer',
     company: 'Foundary',
     start_date: '2020',
-    end_date: 'Present',
+    end_date: '2024',
     description:
       'Built and delivered high quality scalable digital solutions for diverse clients. Lead development of design systems, web and mobile applications for an array of industries including ESG, finance, energy and retail. Integrated advanced machine learning models for data analysis, optimization and automation of processes and workflows.',
-    link: 'https://foundary.dev/',
+    link: 'https://lemonstack.dev/',
     tags: [
       'Typescript',
       'Next.js',
