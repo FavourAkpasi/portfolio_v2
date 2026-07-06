@@ -1,19 +1,19 @@
-import { LINKS, SOCIALS } from '@/lib/constants';
-import { Logo } from '../ui/logo';
-import { cn } from '@/lib/utils';
-import { useActiveLink } from '@/hooks/useActiveLink';
-import { Button } from '../ui/button';
-import { useTheme } from '@/hooks/useTheme';
-import { MoonIcon, SunIcon } from 'lucide-react';
-import { ContactForm } from '../sections/contact-form';
-import { FaFilePdf, FaRegFilePdf } from "react-icons/fa6";
-import { useActiveSectionContext } from '@/context/active-section-context';
-import { TimePortal } from '../ui/time-portal';
+import {LINKS, SOCIALS} from '@/lib/constants';
+import {Logo} from '../ui/logo';
+import {cn} from '@/lib/utils';
+import {useActiveLink} from '@/hooks/useActiveLink';
+import {Button} from '../ui/button';
+import {useTheme} from '@/hooks/useTheme';
+import {MoonIcon, SunIcon} from 'lucide-react';
+import {ContactForm} from '../sections/contact-form';
+import {FaFilePdf, FaRegFilePdf} from 'react-icons/fa6';
+import {useActiveSectionContext} from '@/context/active-section-context';
+import {TimePortal} from '../ui/time-portal';
 
 export const Header = () => {
-  const { activeLink, setActiveLink } = useActiveLink();
-  const { theme, toggleTheme } = useTheme();
-  const { scrollPercentage } = useActiveSectionContext();
+  const {activeLink, setActiveLink} = useActiveLink();
+  const {theme, toggleTheme} = useTheme();
+  const {scrollPercentage} = useActiveSectionContext();
 
   return (
     <header className="lg:h-svh">
@@ -24,7 +24,11 @@ export const Header = () => {
           Building intuitive solutions that blends design and technology.
         </p>
         <div className="flex items-center gap-2 mt-6">
-          <a href="/docs/favour_akpasi_resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            href="/docs/Favour_Akpasi_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button>
               View Resume <FaFilePdf />
             </Button>
@@ -41,14 +45,14 @@ export const Header = () => {
               className="absolute -top-[20%] -left-[20%] w-[70%] h-[70%] rounded-full bg-primary/20 blur-3xl"
               style={{
                 transform: `translateY(${scrollPercentage * 30}%) translateZ(0)`,
-                transition: 'transform 0.1s linear'
+                transition: 'transform 0.1s linear',
               }}
             />
             <div
               className="absolute -bottom-[20%] -right-[20%] w-[70%] h-[70%] rounded-full bg-blue-500/20 blur-3xl"
               style={{
                 transform: `translateY(-${scrollPercentage * 30}%) translateZ(0)`,
-                transition: 'transform 0.1s linear'
+                transition: 'transform 0.1s linear',
               }}
             />
           </div>
@@ -76,7 +80,6 @@ export const Header = () => {
             <ul className="flex flex-col mt-12">
               {LINKS.map((link, index) => (
                 <li key={index} className="flex items-center gap-3">
-
                   <div
                     className={cn(
                       'flex items-center justify-center rounded-full border',
