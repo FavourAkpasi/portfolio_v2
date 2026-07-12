@@ -1,16 +1,13 @@
 'use client';
 
-import {MoonIcon, SunIcon} from 'lucide-react';
-import {Button} from '../ui/button';
 import {Logo} from '../ui/logo';
 import {MobileSidebar} from './mobile-sidebar';
-import {useTheme} from 'next-themes';
+import {ThemeToggle} from '../ui/theme-toggle';
 import {LINKS} from '@/lib/constants';
 import {useActiveLink} from '@/hooks/useActiveLink';
 import {cn} from '@/lib/utils';
 
 export const Navbar = () => {
-  const {resolvedTheme, setTheme} = useTheme();
   const {activeLink, setActiveLink} = useActiveLink();
 
   return (
@@ -37,14 +34,7 @@ export const Navbar = () => {
           ))}
         </ul>
       </div>
-      <Button
-        variant="secondary"
-        size="icon"
-        className="border"
-        onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      >
-        {resolvedTheme === 'dark' ? <SunIcon /> : <MoonIcon />}
-      </Button>
+      <ThemeToggle />
     </nav>
   );
 };
