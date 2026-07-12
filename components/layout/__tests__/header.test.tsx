@@ -5,7 +5,6 @@ import {renderWithProviders, screen} from '@/test/integration';
 describe('Header', () => {
   it('renders the name and title', () => {
     renderWithProviders(<Header />);
-    // The header renders a mobile and a desktop copy, so the text appears twice.
     expect(screen.getAllByText('Favour Akpasi').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Software Engineer').length).toBeGreaterThan(0);
   });
