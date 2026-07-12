@@ -11,6 +11,8 @@ import {StarSpotlight} from '@/components/ui/star-spotlight';
 import {useScrollSpy} from '@/hooks/useScrollSpy';
 import {LINKS} from '@/lib/constants';
 import {useActiveSectionContext} from '@/context/active-section-context';
+// ⚠️ THROWAWAY — remove with the <SentryTestButton /> below after verifying Sentry.
+import {SentryTestButton} from '@/components/sentry-test-button';
 import React from 'react';
 
 const SectionWrapper = ({
@@ -45,6 +47,8 @@ export default function Home() {
 
   return (
     <div className="w-svw min-h-svh">
+      {/* ⚠️ THROWAWAY — remove after verifying Sentry captures the error. */}
+      <SentryTestButton />
       <Navbar />
       <div className="w-full flex flex-col lg:flex-row">
         <Header />
