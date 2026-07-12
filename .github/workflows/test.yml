@@ -1,0 +1,43 @@
+name: Tests
+
+# Runs on pull requests targeting main so failures are caught before the merge
+# (and therefore before Vercel deploys the merged code).
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+  test:
+    # Tests only run if the production build succeeds.
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      # Required for the coverage-report action to post/update the PR comment.
+      pull-requests: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Run tests with coverage
+        run: npm run test:integration:coverage
+      - name: Report coverage on PR
+        # Reads coverage/coverage-summary.json + coverage-final.json and posts a
+        # summary comment. `always()` so the comment is posted even when a test
+        # fails (coverage is emitted via reportOnFailure).
+        if: always()
+        uses: davelosert/vitest-coverage-report-action@v2

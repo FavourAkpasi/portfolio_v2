@@ -1,10 +1,10 @@
-import { useEffect } from "react";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useInView } from "react-intersection-observer";
+import {useEffect} from 'react';
+import {useActiveSectionContext} from '@/context/active-section-context';
+import {useInView} from 'react-intersection-observer';
 
 export function useScrollSpy(sectionName: string, threshold = 0.75) {
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-  const { ref, inView } = useInView({
+  const {setActiveSection, timeOfLastClick} = useActiveSectionContext();
+  const {ref, inView} = useInView({
     threshold,
   });
 

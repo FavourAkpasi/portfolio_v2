@@ -3,8 +3,7 @@ import {Logo} from '../ui/logo';
 import {cn} from '@/lib/utils';
 import {useActiveLink} from '@/hooks/useActiveLink';
 import {Button} from '../ui/button';
-import {useTheme} from '@/hooks/useTheme';
-import {MoonIcon, SunIcon} from 'lucide-react';
+import {ThemeToggle} from '../ui/theme-toggle';
 import {ContactForm} from '../sections/contact-form';
 import {FaFilePdf, FaRegFilePdf} from 'react-icons/fa6';
 import {useActiveSectionContext} from '@/context/active-section-context';
@@ -12,7 +11,6 @@ import {TimePortal} from '../ui/time-portal';
 
 export const Header = () => {
   const {activeLink, setActiveLink} = useActiveLink();
-  const {theme, toggleTheme} = useTheme();
   const {scrollPercentage} = useActiveSectionContext();
 
   return (
@@ -134,14 +132,7 @@ export const Header = () => {
             </ul>
 
             <div className="ml-auto flex items-center gap-2">
-              <Button
-                variant="secondary"
-                size="icon"
-                className="border"
-                onClick={() => toggleTheme()}
-              >
-                {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-              </Button>
+              <ThemeToggle />
               <TimePortal />
             </div>
           </div>

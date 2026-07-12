@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -40,5 +41,18 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# ide
+# idea files
 .idea
+
+# vscode files
+.vscode
+
+# cursor files
+.cursor
+
+# claude files
+.claude
+claude.md
+# ...but track the project's uppercase CLAUDE.md (the pattern above is
+# case-insensitive on macOS and would otherwise ignore it).
+!CLAUDE.md

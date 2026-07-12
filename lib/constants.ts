@@ -1,5 +1,14 @@
-import { IEducation, IExperience, ILink, IProject, ISocial } from '@/types';
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaUser, FaBriefcase, FaLaptop, FaGraduationCap } from 'react-icons/fa';
+import {IEducation, IExperience, ILink, IProduct, ISocial} from '@/types';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaTwitter,
+  FaUser,
+  FaBriefcase,
+  FaLaptop,
+  FaGraduationCap,
+} from 'react-icons/fa';
 
 export const LINKS: ILink[] = [
   {
@@ -52,7 +61,15 @@ export const EXPERIENCES: IExperience[] = [
     description:
       'Lead frontend development and DevOps for the nature and climate risk intelligence platform. Build highly scalable web application for interpreting, understanding and visualizing complex geospatial data. Work closely with cross-functional teams including developers, scientists, and product managers to deliver a scalable digital product that focuses on user experience and accessibility. Contribute to machine learning workflows by correcting data bias and managing Azure infrastructure to support the platform’s AI-driven insights.',
     link: 'https://www.refinq.com/',
-    tags: ['Typescript', 'React.js', 'Azure', 'DevOps', 'Vitest', 'Playwright', 'Machine Learning'],
+    tags: [
+      'Typescript',
+      'React.js',
+      'Azure',
+      'DevOps',
+      'Vitest',
+      'Playwright',
+      'Machine Learning',
+    ],
   },
   {
     position: 'Senior Fullstack Engineer',
@@ -85,20 +102,16 @@ export const EXPERIENCES: IExperience[] = [
     description:
       'Developed user-centric frontend solutions focused on Mobile Value-Added Services (mVAS) and digital transformation. Built and maintained responsive web applications supporting various business verticals including NXT Tech and NXT Medical. Collaborated with cross-functional teams including developers, product managers, and designers to deliver beautiful and scalable digital products that focus on user experience and accessibility.',
     link: 'https://nxt.ng/',
-    tags: [
-      'Typescript',
-      'Next.js',
-      'React.js',
-      'React Native',
-    ],
+    tags: ['Typescript', 'Next.js', 'React.js', 'React Native'],
   },
 ];
 
-export const PROJECTS: IProject[] = [
+export const PRODUCTS: IProduct[] = [
   {
     image: '/images/refinq.png',
     name: 'Refinq',
-    description: 'Refinq is a nature and climate risk intelligence platform. It helps companies understand and manage the financial risks associated with climate change and biodiversity loss. Built for CFOs, risk managers, and ESG (Environmental, Social, and Governance) teams in sectors like energy, infrastructure, manufacturing, and retail, the solution aggregates fragmented data on climate and biodiversity and translates it into actionable financial insights.',
+    description:
+      'Refinq is a nature and climate risk intelligence platform. It helps companies understand and manage the financial risks associated with climate change and biodiversity loss. Built for CFOs, risk managers, and ESG (Environmental, Social, and Governance) teams in sectors like energy, infrastructure, manufacturing, and retail, the solution aggregates fragmented data on climate and biodiversity and translates it into actionable financial insights.',
     website: 'https://www.refinq.com/',
     made_at: 'Refinq GmbH',
   },
@@ -178,7 +191,7 @@ export const PROJECTS: IProject[] = [
     image: '/images/journal-buddy.png',
     name: 'Journal Buddy',
     description:
-      'JournalBuddy is a web application that integrates OpenAI\'s language models to provide a unique journaling experience. It uses AI to analyze your entries, provide insights, and even suggest topics to write about.',
+      "JournalBuddy is a web application that integrates OpenAI's language models to provide a unique journaling experience. It uses AI to analyze your entries, provide insights, and even suggest topics to write about.",
     website: 'https://journal-buddy-v2.vercel.app',
     github: 'https://github.com/FavourAkpasi/journal-buddy-v2',
     made_at: 'Foundary',
