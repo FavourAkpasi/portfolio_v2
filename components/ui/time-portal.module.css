@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 35%, #050505, );
+  background: radial-gradient(circle at 50% 35%, #050505);
   /* Darker background */
   z-index: 0;
 }
@@ -35,7 +35,9 @@
   filter: hue-rotate(0deg);
   animation: wobble calc(var(--speed) * var(--t)) linear infinite;
   transform-origin: -var(--y) -var(--x);
-  box-shadow: 0 0 .5em .2em #000 inset, 0 0 .15em 0 #fff;
+  box-shadow:
+    0 0 0.5em 0.2em #000 inset,
+    0 0 0.15em 0 #fff;
   display: flex;
   align-items: center;
   justify-content: center;

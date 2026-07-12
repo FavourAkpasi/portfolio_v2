@@ -3,7 +3,7 @@ import {Logo} from '../ui/logo';
 import {cn} from '@/lib/utils';
 import {useActiveLink} from '@/hooks/useActiveLink';
 import {Button} from '../ui/button';
-import {useTheme} from '@/hooks/useTheme';
+import {useTheme} from 'next-themes';
 import {MoonIcon, SunIcon} from 'lucide-react';
 import {ContactForm} from '../sections/contact-form';
 import {FaFilePdf, FaRegFilePdf} from 'react-icons/fa6';
@@ -12,7 +12,7 @@ import {TimePortal} from '../ui/time-portal';
 
 export const Header = () => {
   const {activeLink, setActiveLink} = useActiveLink();
-  const {theme, toggleTheme} = useTheme();
+  const {resolvedTheme, setTheme} = useTheme();
   const {scrollPercentage} = useActiveSectionContext();
 
   return (
@@ -138,9 +138,11 @@ export const Header = () => {
                 variant="secondary"
                 size="icon"
                 className="border"
-                onClick={() => toggleTheme()}
+                onClick={() =>
+                  setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+                }
               >
-                {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+                {resolvedTheme === 'dark' ? <SunIcon /> : <MoonIcon />}
               </Button>
               <TimePortal />
             </div>

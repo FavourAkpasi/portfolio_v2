@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { Navbar } from "@/components/layout/navbar";
-import { Header } from "@/components/layout/header";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { About } from "@/components/sections/about";
-import { Experience } from "@/components/sections/experience";
-import { Projects } from "@/components/sections/projects";
-import { Education } from "@/components/sections/education";
-import { StarSpotlight } from "@/components/ui/star-spotlight";
-import { useScrollSpy } from "@/hooks/useScrollSpy";
-import { LINKS } from "@/lib/constants";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import React from "react";
+import {Navbar} from '@/components/layout/navbar';
+import {Header} from '@/components/layout/header';
+import {ScrollArea} from '@/components/ui/scroll-area';
+import {About} from '@/components/sections/about';
+import {Experience} from '@/components/sections/experience';
+import {Products} from '@/components/sections/products';
+import {Education} from '@/components/sections/education';
+import {StarSpotlight} from '@/components/ui/star-spotlight';
+import {useScrollSpy} from '@/hooks/useScrollSpy';
+import {LINKS} from '@/lib/constants';
+import {useActiveSectionContext} from '@/context/active-section-context';
+import React from 'react';
 
 const SectionWrapper = ({
   id,
@@ -20,16 +20,12 @@ const SectionWrapper = ({
   id: string;
   children: React.ReactNode;
 }) => {
-  const { ref } = useScrollSpy(id, 0.5);
-  return (
-    <div ref={ref}>
-      {children}
-    </div>
-  );
+  const {ref} = useScrollSpy(id, 0.5);
+  return <div ref={ref}>{children}</div>;
 };
 
 export default function Home() {
-  const { setScrollPercentage } = useActiveSectionContext();
+  const {setScrollPercentage} = useActiveSectionContext();
   const ticking = React.useRef(false);
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
@@ -63,7 +59,7 @@ export default function Home() {
                 <Experience />
               </SectionWrapper>
               <SectionWrapper id={LINKS[2].href}>
-                <Projects />
+                <Products />
               </SectionWrapper>
               <SectionWrapper id={LINKS[3].href}>
                 <Education />

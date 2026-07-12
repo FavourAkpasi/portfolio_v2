@@ -1,9 +1,7 @@
-"use client";
+'use client';
 
-import React, { useState, createContext, useContext } from "react";
-import { LINKS } from "@/lib/constants";
-
-type SectionName = (typeof LINKS)[number]["name"];
+import React, {useState, createContext, useContext} from 'react';
+import {LINKS} from '@/lib/constants';
 
 type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
@@ -18,9 +16,8 @@ type ActiveSectionContextType = {
   setScrollPercentage: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(
-  null
-);
+export const ActiveSectionContext =
+  createContext<ActiveSectionContextType | null>(null);
 
 export default function ActiveSectionContextProvider({
   children,
@@ -50,7 +47,7 @@ export function useActiveSectionContext() {
 
   if (context === null) {
     throw new Error(
-      "useActiveSectionContext must be used within an ActiveSectionContextProvider"
+      'useActiveSectionContext must be used within an ActiveSectionContextProvider',
     );
   }
 

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useTheme } from "@/hooks/useTheme";
-import { useEffect, useRef } from "react";
+import {useTheme} from 'next-themes';
+import {useEffect, useRef} from 'react';
 
 interface Star {
   x: number;
@@ -15,15 +15,15 @@ interface Star {
 }
 
 export const StarSpotlight = () => {
-  const { theme } = useTheme();
+  const {resolvedTheme: theme} = useTheme();
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const mouseRef = useRef({ x: 0, y: 0 });
+  const mouseRef = useRef({x: 0, y: 0});
   const starsRef = useRef<Star[]>([]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const resizeCanvas = () => {
@@ -54,11 +54,11 @@ export const StarSpotlight = () => {
       if (!ctx || !canvas) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      const isDark = theme === "dark";
-      const color = isDark ? "255, 255, 255" : "0, 0, 0";
+      const isDark = theme === 'dark';
+      const color = isDark ? '255, 255, 255' : '0, 0, 0';
       const time = Date.now();
 
-      starsRef.current.forEach((star) => {
+      starsRef.current.forEach(star => {
         // Move star
         star.x += star.vx;
         star.y += star.vy;
@@ -98,18 +98,18 @@ export const StarSpotlight = () => {
     };
 
     const handleMouseMove = (e: MouseEvent) => {
-      mouseRef.current = { x: e.clientX, y: e.clientY };
+      mouseRef.current = {x: e.clientX, y: e.clientY};
     };
 
-    window.addEventListener("resize", resizeCanvas);
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('mousemove', handleMouseMove);
 
     resizeCanvas();
     animate();
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas);
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [theme]);
 

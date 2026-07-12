@@ -1,6 +1,6 @@
-import { LucideProps } from 'lucide-react';
-import { ForwardRefExoticComponent, RefAttributes } from 'react';
-import { IconType } from 'react-icons/lib';
+import {LucideProps} from 'lucide-react';
+import {ForwardRefExoticComponent, RefAttributes} from 'react';
+import {IconType} from 'react-icons/lib';
 
 export type Theme = 'light' | 'dark';
 
@@ -8,18 +8,18 @@ export interface ILink {
   name: string;
   href: string;
   icon:
-  | ForwardRefExoticComponent<
-    Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
-  >
-  | IconType;
+    | ForwardRefExoticComponent<
+        Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
+      >
+    | IconType;
 }
 
 export interface ISocial {
   icon:
-  | ForwardRefExoticComponent<
-    Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
-  >
-  | IconType;
+    | ForwardRefExoticComponent<
+        Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>
+      >
+    | IconType;
   href: string;
 }
 

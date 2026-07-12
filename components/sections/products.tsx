@@ -5,7 +5,7 @@ import {ExternalLinkIcon} from 'lucide-react';
 import {Badge} from '../ui/badge';
 import {FaGithub} from 'react-icons/fa';
 
-export const Projects = () => {
+export const Products = () => {
   return (
     <section id={LINKS[2].href.replace('#', '')} className="pt-16">
       <h2 className="font-semibold text-2xl">Products</h2>
@@ -16,7 +16,7 @@ export const Projects = () => {
             key={index}
             className="group relative rounded-xl p-[2px] overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105"
           >
-            <div className="absolute -insert-full animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF0000_0%,#FFFF00_17%,#00FF00_33%,#00FFFF_50%,#0000FF_67%,#FF00FF_83%,#FF0000_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+            <div className="absolute -inset-full animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FF0000_0%,#FFFF00_17%,#00FF00_33%,#00FFFF_50%,#0000FF_67%,#FF00FF_83%,#FF0000_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
             <Card className="relative h-full flex flex-col sm:flex-row items-start gap-4 p-3 bg-card rounded-xl border-0">
               <div className="flex-1 w-full sm:max-w-[200px] aspect-video rounded-lg border">
                 <Image
