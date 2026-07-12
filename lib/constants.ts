@@ -1,4 +1,4 @@
-import { IEducation, IExperience, ILink, IProject, ISocial } from '@/types';
+import { IEducation, IExperience, ILink, IProduct, ISocial } from '@/types';
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaUser, FaBriefcase, FaLaptop, FaGraduationCap } from 'react-icons/fa';
 
 export const LINKS: ILink[] = [
@@ -94,7 +94,7 @@ export const EXPERIENCES: IExperience[] = [
   },
 ];
 
-export const PROJECTS: IProject[] = [
+export const PRODUCTS: IProduct[] = [
   {
     image: '/images/refinq.png',
     name: 'Refinq',

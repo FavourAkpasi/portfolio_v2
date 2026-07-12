@@ -33,7 +33,7 @@ export interface IExperience {
   tags: string[];
 }
 
-export interface IProject {
+export interface IProduct {
   image: string;
   name: string;
   description: string;

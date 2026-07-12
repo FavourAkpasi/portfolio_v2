@@ -40,5 +40,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# ide
+# idea files
 .idea
+
+# vscode files
+.vscode
+
+# cursor files
+.cursor
+
+# claude files
+.claude
+claude.md
