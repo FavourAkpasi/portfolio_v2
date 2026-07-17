@@ -12,6 +12,7 @@ import {useScrollSpy} from '@/hooks/useScrollSpy';
 import {LINKS} from '@/lib/constants';
 import {useActiveSectionContext} from '@/context/active-section-context';
 import React from 'react';
+import {Hobbies} from '@/components/sections/hobbies';
 
 const SectionWrapper = ({
   id,
@@ -62,6 +63,9 @@ export default function Home() {
                 <Products />
               </SectionWrapper>
               <SectionWrapper id={LINKS[3].href}>
+                <Hobbies />
+              </SectionWrapper>
+              <SectionWrapper id={LINKS[4].href}>
                 <Education />
               </SectionWrapper>
             </div>
