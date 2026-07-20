@@ -216,7 +216,7 @@ export const HOBBIES: IProduct[] = [
     image: '/images/journal-buddy.png',
     name: 'Journal Buddy',
     description:
-      "JournalBuddy is a web application that integrates OpenAI's language models to provide a unique user-friendly journaling experience. It uses AI to analyze your entries, provide insights, and even suggest topics to write about. This is an example of how i would integrate AI into a user-friendly application.",
+      "JournalBuddy is a web application that integrates OpenAI's language models to provide a unique, user-friendly journaling experience. It uses AI to analyze your entries, provide insights, and even suggest topics to write about. This is an example of how I would integrate AI into an application.",
     website: 'https://journal-buddy-v2.vercel.app',
     github: 'https://github.com/FavourAkpasi/journal-buddy-v2',
     made_at: 'My workstation',
