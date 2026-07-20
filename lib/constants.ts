@@ -1,4 +1,4 @@
-import {IEducation, IExperience, ILink, IProduct, ISocial} from '@/types';
+import { IEducation, IExperience, ILink, IProduct, ISocial } from '@/types';
 import {
   FaGithub,
   FaLinkedin,
@@ -8,6 +8,7 @@ import {
   FaBriefcase,
   FaLaptop,
   FaGraduationCap,
+  FaHeart,
 } from 'react-icons/fa';
 
 export const LINKS: ILink[] = [
@@ -25,6 +26,11 @@ export const LINKS: ILink[] = [
     name: 'Products',
     href: '#products',
     icon: FaLaptop,
+  },
+  {
+    name: 'Hobbies',
+    href: '#hobbies',
+    icon: FaHeart,
   },
   {
     name: 'Education',
@@ -187,14 +193,33 @@ export const PRODUCTS: IProduct[] = [
     website: 'https://menu.theescape.ng/?id=the-escape',
     made_at: 'Foundary',
   },
+];
+
+export const HOBBIES: IProduct[] = [
+  {
+    image: '/images/agency.png',
+    name: 'Agency Sample',
+    description: 'If I were contacted to build a website for an agency (without a design), it would look something like this. It was built with Next.js, GraphQL, Tailwind CSS, and TypeScript. Even if it was just a concept, it shows how I would tell a story with software. It showcases smooth micro-animations (GSAP, Framer Motion), comprehensive testing (Vitest), observability (Sentry), a CI/CD (GitHub Actions) pipeline, and OK-ish documentation.',
+    website: 'https://modern-agency-phi.vercel.app/',
+    github: 'https://github.com/FavourAkpasi/modern-agency',
+    made_at: 'The comfort of my home',
+  },
+  {
+    image: '/images/genovis.png',
+    name: 'GenoVis',
+    description: 'GenoVis is a high-performance visual data science dashboard that handles, processes, and renders massive genomic mutation datasets seamlessly. The architecture is explicitly decoupled to keep the main thread free, ensuring a smooth user experience even over millions of records. Built as a showcase for the the capabilities that modern data-heavy applications require: virtualization, off - main - thread processing, high - density visualization, and modern tooling(Rspack, oxlint, vitetest).',
+    website: 'https://geno-vis.vercel.app',
+    github: 'https://github.com/FavourAkpasi/genovis',
+    made_at: 'The comfort of my home',
+  },
   {
     image: '/images/journal-buddy.png',
     name: 'Journal Buddy',
     description:
-      "JournalBuddy is a web application that integrates OpenAI's language models to provide a unique journaling experience. It uses AI to analyze your entries, provide insights, and even suggest topics to write about.",
+      "JournalBuddy is a web application that integrates OpenAI's language models to provide a unique, user-friendly journaling experience. It uses AI to analyze your entries, provide insights, and even suggest topics to write about. This is an example of how I would integrate AI into an application.",
     website: 'https://journal-buddy-v2.vercel.app',
     github: 'https://github.com/FavourAkpasi/journal-buddy-v2',
-    made_at: 'Foundary',
+    made_at: 'My workstation',
   },
 ];
 

@@ -35,7 +35,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="hidden xl:block w-full max-w-[550px] h-full p-4 relative z-40">
+      <div className="hidden xl:block w-full max-w-[500px] h-full p-4 relative z-40">
         <div className="w-full h-full bg-accent dark:bg-sidebar rounded-xl p-9 flex flex-col relative overflow-hidden">
           {/* Dynamic Gradient Background */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -49,8 +49,8 @@ export const Header = () => {
             <div
               className="absolute -bottom-[20%] -right-[20%] w-[70%] h-[70%] rounded-full bg-blue-500/20 blur-3xl"
               style={{
-                transform: `translateY(-${scrollPercentage * 30}%) translateZ(0)`,
-                transition: 'transform 0.1s linear',
+                transform: `translateY(-${scrollPercentage * 40}%) translateZ(0)`,
+                transition: 'transform 0.2s linear',
               }}
             />
           </div>
