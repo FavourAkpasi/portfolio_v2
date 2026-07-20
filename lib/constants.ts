@@ -199,7 +199,7 @@ export const HOBBIES: IProduct[] = [
   {
     image: '/images/agency.png',
     name: 'Agency Sample',
-    description: 'If i was contacted to build a website for an agency(without a design), it would look something like this. It was built with Next.js, GraphQL, Tailwind CSS, and TypeScript. Even if it was just a concept, It shows how i would tell a story with software. It showcases smooth micro animations (GASP, Framer Motion), comprehensive testing(Vitest), observability(Sentry), a CI/CD (Github Actions) pipeline and an ok-ish documentation.',
+    description: 'If I were contacted to build a website for an agency (without a design), it would look something like this. It was built with Next.js, GraphQL, Tailwind CSS, and TypeScript. Even if it was just a concept, it shows how I would tell a story with software. It showcases smooth micro-animations (GSAP, Framer Motion), comprehensive testing (Vitest), observability (Sentry), a CI/CD (GitHub Actions) pipeline, and OK-ish documentation.',
     website: 'https://modern-agency-phi.vercel.app/',
     github: 'https://github.com/FavourAkpasi/modern-agency',
     made_at: 'The comfort of my home',
