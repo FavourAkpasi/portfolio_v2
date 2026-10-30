@@ -1,4 +1,4 @@
-import { IEducation, IExperience, ILink, IProduct, ISocial } from '@/types';
+import {IEducation, IExperience, ILink, IProduct, ISocial} from '@/types';
 import {
   FaGithub,
   FaLinkedin,
@@ -60,10 +60,30 @@ export const SOCIALS: ISocial[] = [
 
 export const EXPERIENCES: IExperience[] = [
   {
+    position: 'Senior Web Developer',
+    company: 'LX media GmbH',
+    start_date: '2026',
+    end_date: 'Present',
+    description:
+      'Build and scale high-performance websites for industrial and commercial clients on a Next.js, Storyblok and WordPress stack. Engineered a unified Next.js middleware that cut edge-function costs by around 70% for a client project, then rolled it out across further sites. Led a domain migration for an industrial client, moved the team’s components into versioned npm packages safeguarded by automated build checks, and built tooling for the whole team — including a time tracker for AI-assisted development sessions and a package that exposes structured website data to search engines and AI systems.',
+    link: 'https://www.lx-media.at/',
+    tags: [
+      'Typescript',
+      'Next.js',
+      'React.js',
+      'Storyblok',
+      'WordPress',
+      'Middleware',
+      'npm Packages',
+      'SEO',
+      'CI/CD',
+    ],
+  },
+  {
     position: 'Senior Frontend Engineer',
     company: 'Refinq GmbH',
     start_date: '2024',
-    end_date: 'Present',
+    end_date: '2026',
     description:
       'Lead frontend development and DevOps for the nature and climate risk intelligence platform. Build highly scalable web application for interpreting, understanding and visualizing complex geospatial data. Work closely with cross-functional teams including developers, scientists, and product managers to deliver a scalable digital product that focuses on user experience and accessibility. Contribute to machine learning workflows by correcting data bias and managing Azure infrastructure to support the platform’s AI-driven insights.',
     link: 'https://www.refinq.com/',
@@ -113,6 +133,14 @@ export const EXPERIENCES: IExperience[] = [
 ];
 
 export const PRODUCTS: IProduct[] = [
+  {
+    image: '/images/vectaCore.png',
+    name: 'VectaCore',
+    description:
+      'VectaCore is an Austrian manufacturer of unmanned helicopters, backed by the PIERER Group. Its flagship VC-35 system carries payloads of up to 35 kg with 3–6 hours of flight endurance and a 200 km transmission range, automating missions such as offshore cargo delivery to wind turbine platforms and wildfire detection and response. The multilingual website presents the platform, its specifications and use cases to industrial and public-safety customers.',
+    website: 'https://vectacore.com/en',
+    made_at: 'LX media GmbH',
+  },
   {
     image: '/images/refinq.png',
     name: 'Refinq',
@@ -199,7 +227,8 @@ export const HOBBIES: IProduct[] = [
   {
     image: '/images/Agency.png',
     name: 'Agency Sample',
-    description: 'If I were contacted to build a website for an agency (without a design), it would look something like this. It was built with Next.js, GraphQL, Tailwind CSS, and TypeScript. Even if it was just a concept, it shows how I would tell a story with software. It showcases smooth micro-animations (GSAP, Framer Motion), comprehensive testing (Vitest), observability (Sentry), a CI/CD (GitHub Actions) pipeline, and OK-ish documentation.',
+    description:
+      'If I were contacted to build a website for an agency (without a design), it would look something like this. It was built with Next.js, GraphQL, Tailwind CSS, and TypeScript. Even if it was just a concept, it shows how I would tell a story with software. It showcases smooth micro-animations (GSAP, Framer Motion), comprehensive testing (Vitest), observability (Sentry), a CI/CD (GitHub Actions) pipeline, and OK-ish documentation.',
     website: 'https://modern-agency-phi.vercel.app/',
     github: 'https://github.com/FavourAkpasi/modern-agency',
     made_at: 'The comfort of my home',
@@ -207,7 +236,8 @@ export const HOBBIES: IProduct[] = [
   {
     image: '/images/genovis.png',
     name: 'GenoVis',
-    description: 'GenoVis is a high-performance visual data science dashboard that handles, processes, and renders massive genomic mutation datasets seamlessly. The architecture is explicitly decoupled to keep the main thread free, ensuring a smooth user experience even over millions of records. Built as a showcase for the the capabilities that modern data-heavy applications require: virtualization, off - main - thread processing, high - density visualization, and modern tooling(Rspack, oxlint, vitetest).',
+    description:
+      'GenoVis is a high-performance visual data science dashboard that handles, processes, and renders massive genomic mutation datasets seamlessly. The architecture is explicitly decoupled to keep the main thread free, ensuring a smooth user experience even over millions of records. Built as a showcase for the the capabilities that modern data-heavy applications require: virtualization, off - main - thread processing, high - density visualization, and modern tooling(Rspack, oxlint, vitetest).',
     website: 'https://geno-vis.vercel.app',
     github: 'https://github.com/FavourAkpasi/genovis',
     made_at: 'The comfort of my home',
