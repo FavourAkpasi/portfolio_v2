@@ -190,14 +190,6 @@ export const PRODUCTS: IProduct[] = [
     made_at: 'Foundary',
   },
   {
-    image: '/images/ops360.png',
-    name: 'Ops360',
-    description:
-      'Ops360 helps businesses turn operational challenges into effortless growth. By partnering throughout the implementation process, it optimizes workflows, boosts productivity, and ensures sustainable success.',
-    website: 'https://www.getexperthub.com/',
-    made_at: 'Foundary',
-  },
-  {
     image: '/images/fintell360.png',
     name: 'Fintell360',
     description:
