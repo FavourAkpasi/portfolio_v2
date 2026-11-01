@@ -15,11 +15,13 @@ export const About = () => {
         <p>
           My background in Petroleum Engineering shaped my problem-solving
           mindset and technical curiosity. I’m now pursuing a Master’s in
-          Artificial Intelligence at Johannes Kepler University, and I put that
-          interest into practice every day. AI tools like Claude Code are a core
-          part of my workflow — helping me scaffold, refactor, review and test
-          faster — so I can spend more of my time on architecture, product
-          decisions and the details users actually notice.
+          Artificial Intelligence at Johannes Kepler University, and I apply it
+          every day by Integrating AI into software products where it genuinely
+          helps users achieve more out of the product. AI
+          tools like Claude Code are also a core part of my own workflow, it
+          helps me scaffold, refactor, review and test faster, so I can spend
+          more of my time on architecture, product decisions and the details
+          users actually notice.
         </p>
         <p>
           I enjoy working with the latest technologies — especially across the

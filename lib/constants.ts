@@ -237,7 +237,7 @@ export const HOBBIES: IProduct[] = [
     image: '/images/genovis.png',
     name: 'GenoVis',
     description:
-      'GenoVis is a high-performance visual data science dashboard that handles, processes, and renders massive genomic mutation datasets seamlessly. The architecture is explicitly decoupled to keep the main thread free, ensuring a smooth user experience even over millions of records. Built as a showcase for the the capabilities that modern data-heavy applications require: virtualization, off - main - thread processing, high - density visualization, and modern tooling(Rspack, oxlint, vitetest).',
+      'GenoVis is a high-performance visual data science dashboard that handles, processes, and renders massive genomic mutation datasets seamlessly. The architecture is explicitly decoupled to keep the main thread free, ensuring a smooth user experience even over millions of records. Built as a showcase for the capabilities that modern data-heavy applications require: virtualization, off-main-thread processing, high-density visualization, and modern tooling (Rspack, oxlint, Vitest).',
     website: 'https://geno-vis.vercel.app',
     github: 'https://github.com/FavourAkpasi/genovis',
     made_at: 'The comfort of my home',
